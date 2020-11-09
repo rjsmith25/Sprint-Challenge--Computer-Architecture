@@ -77,11 +77,11 @@ class CPU:
             print("File not found")
             sys.exit(2)
 
-    def ram_read(self, MAR):
-        return self.ram[MAR]
+    def ram_read(self, pc):
+        return self.ram[pc]
 
-    def ram_write(self, MDR, MAR):
-        self.ram[MAR] = MDR
+    def ram_write(self, value, address):
+        self.ram[address] = value
 
     def alu(self, op, reg_a, reg_b):
         """ALU operations."""
